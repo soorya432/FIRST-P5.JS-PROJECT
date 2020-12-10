@@ -1,0 +1,70 @@
+
+<html>
+    <head>
+        <title>P5 Project</title>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+
+        <style>
+            body{
+                text-align: center;
+                background-color: rgb(42, 97, 199);
+            }
+            .settings{
+                width:90%;
+                font-size: 35px !important;
+            }
+            #header{
+                width:90%;
+                font-size: 40px;
+                letter-spacing: 5px;
+            }
+            canvas{
+                margin-bottom:10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1 class="btn btn-info" id="header">
+                P5 Project
+            </h1>
+            <hr>
+            <button class="btn btn-info settings"data-toggle="modal" data-target="#dropdown"><h3 class="glyphicon glyphicon-cog"></h3>Settings</button>
+        </div>
+
+        <div class="modal fade" id="dropdown">
+            <div class="modal-dialog">
+               <div class="modal-content">
+                   <div class="modal-header">
+                       <button type="button" class="close" data-dismiss="modal">&times;</button>
+                       <h4 class="modal-title">Settings</h4>
+                   </div>
+                   <div class="modal-body">
+                       <label>Filter color:-</label>
+                       <input type="color" class="form-control" id="filter_cicle" value="#ffffff">
+                       <br>
+                       <label>Frame circle radius:-</label>
+                       <input type="number" class="form-control" id="radius" value="70">
+                       <br>
+                       <label>Frame circle color:-</label>
+                       <input type="color" class="form-control" id="color_cicle" value="#0000FF">
+                        <br>
+                        <label>Frame rectangle color:-</label>
+                        <input type="color" class="form-control" id="rect_color" value="#00FFFF">
+                       <hr>
+                       <button class="btn btn-danger" onclick="apply()">APPLY</button>
+                       <hr>
+                       <button class="btn btn-danger" onclick="reset()">RESET</button>
+                   </div>
+                </div>
+            </div>   
+       </div>
+
+       <button class="btn btn-info settings" style="margin-top:580px;margin-bottom: 10px;" onclick="safe()"><h3 class="glyphicon glyphicon-picture"></h3>Download</button>
+        <script src="1main.js"></script>
+    </body>
+</html>
